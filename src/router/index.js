@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import service from '../components/service'
 import supplier from '../components/supplier'
 import commodity from '../components/pages/commodity.vue'
-import demo from '../components/pages/demo'
+import order from '../components/pages/order'
 
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
@@ -36,13 +36,17 @@ export default new Router({
                     component: commodity
                 },
                 {
-                    name: "demo",
-                    path: "/demo",
-                    component: demo
+                    name: "order",
+                    path: "/order",
+                    component: order
                 },
             ]
         },
+        {
 
+            path: '/Pmanager',
+            component: resolve => require(['../components/Pmanager.vue'], resolve)
+        }
 
     ]
 })

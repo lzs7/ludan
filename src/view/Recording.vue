@@ -29,7 +29,7 @@
         <el-input type="textarea" v-model="form.desc"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm(form)">立即创建</el-button>
+        <el-button type="primary" @click="submitForm('form')">立即创建</el-button>
         <el-button @click="resetForm('form')">重置</el-button>
       </el-form-item>
     </el-form>
@@ -81,11 +81,11 @@ export default {
   },
   methods: {
     submitForm(formName) {
-      
+      var _this=this
       this.$refs[formName].validate(valid => {
         if (valid) {
           alert("submit!");
-          console.log(formName)
+          console.log(_this.formName)
         } else {
           console.log("error submit!!");
           return false;

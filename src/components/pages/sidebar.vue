@@ -15,7 +15,7 @@
                 >
                   <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name">
                     <template slot="title">
-                      <i class="el-icon-s-platform"></i>
+                      <i class="el-icon-s-shop"></i>
                       <span>{{ item.navItem }}</span>
                     </template>
                   </el-menu-item>
@@ -30,7 +30,7 @@ export default {
     return {
       navList: [
         { name: "/commodity", navItem: "商品管理" },
-        { name: "/demo", navItem: "订单管理" }
+        { name: "/order", navItem: "订单管理" }
         // {name:'/components/Management',navItem:'权限管理'},
       ]
     };

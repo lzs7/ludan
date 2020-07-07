@@ -5,15 +5,24 @@
                 <el-tab-pane label="个人商品">
                   <personal></personal>
                 </el-tab-pane>
-                <el-tab-pane label="待审核商品">配置管理</el-tab-pane>
-                <el-tab-pane label="已通过审核">角色管理</el-tab-pane>
-                <el-tab-pane label="未通过审核">定时任务补偿</el-tab-pane>
+                <el-tab-pane label="待审核商品">
+                  <breviewed></breviewed>
+                </el-tab-pane>
+                <el-tab-pane label="已通过审核">
+                  <reviewed></reviewed>
+                </el-tab-pane>
+                <el-tab-pane label="未通过审核">
+                  <failed></failed>
+                </el-tab-pane>
               </el-tabs>
            </div>
         </div>
 </template>
 <script>
 import Personal from './comment/Personal'
+import Breviewed from './comment/Breviewed'
+import Reviewed from './comment/Reviewed'
+import Failed from './comment/Failed'
 export default {
   data () {
     return {
@@ -21,7 +30,10 @@ export default {
     }
   },
   components : {
-    personal:Personal
+    personal:Personal,
+    breviewed:Breviewed,
+    reviewed:Reviewed,
+    failed:Failed,
   }
 }
 </script>
