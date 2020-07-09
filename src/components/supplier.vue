@@ -1,8 +1,10 @@
 <template>
+<!-- 供应商页面 -->
   <div>
     <div>
       <el-container>
         <el-header>
+           <span class="touxiang"><img src="../assets/touxiang.gif" alt=""></span>
           <span class="name">欢迎您：小明</span>
           <span>供应商操作页面</span>
           
@@ -35,6 +37,10 @@ export default {
 </script>
  
 <style>
+img{
+  width:100%;
+  height:100%
+}
 .el-header {
   background-color: #545c64;
   color: #fff;
@@ -42,7 +48,7 @@ export default {
 }
 .name {
   position: absolute;
-  left: 30px;
+  left: 65px;
 }
 .el-main {
   background-color: #fff;
@@ -56,5 +62,12 @@ export default {
 }
 .el-aside{
   background-color: #545c64
+}
+.touxiang{
+  position: absolute;
+  left:13px;
+  width:50px;
+  height:50px;
+  line-height: 100px;
 }
 </style>

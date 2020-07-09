@@ -5,6 +5,7 @@ import supplier from '../components/supplier'
 import commodity from '../components/pages/commodity.vue'
 import order from '../components/pages/order'
 
+
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
     return originalPush.call(this, location).catch(err => err)
@@ -46,6 +47,10 @@ export default new Router({
 
             path: '/Pmanager',
             component: resolve => require(['../components/Pmanager.vue'], resolve)
+        },
+        {
+            path: '/administrators',
+            component: resolve => require(['../components/administrators.vue'], resolve)
         }
 
     ]

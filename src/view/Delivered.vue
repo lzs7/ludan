@@ -51,9 +51,16 @@
       label="用户信息"
       width="150">
       <template slot-scope="scope">
-        <p>{{ scope.row.user }}</p>
-        <p>{{ scope.row.phone }}</p>
-        <p>{{ scope.row.address }}</p>
+        <el-popover
+          placement="top-start"
+          title="地址"
+          width="200"
+          trigger="hover"
+          :content="scope.row.address"
+        >
+          <p slot="reference">{{ scope.row.user }}</p>
+          <p slot="reference">{{ scope.row.phone }}</p>
+        </el-popover>
       </template>
     </el-table-column>
     <el-table-column

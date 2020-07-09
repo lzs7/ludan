@@ -5,7 +5,15 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import axios from "axios"
+import qs from "qs"
 Vue.config.productionTip = false
+
+Vue.prototype.$axios = axios;
+Vue.prototype.$qs = qs;
+axios.defaults.baseURL = "http://localhost:8080"; //接口路径
+axios.defaults.withCredentials = true; //设置发起请求的‘凭据模式’为‘include’，
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 Vue.use(ElementUI)
     /* eslint-disable no-new */

@@ -1,10 +1,12 @@
 <template>
+<!-- 客服页面 -->
   <div>
     <el-container>
       <el-header>
         <span class="sect"><selct></selct></span>
         <span>客服操作页面</span>
-        <span class="name">和妹陀</span>
+        <span class="toux"><img src="../assets/touxiang.gif" alt=""></span>
+        <span class="Name">和妹陀</span>
       </el-header>
       <el-main>
         <div class="shenti">
@@ -67,6 +69,10 @@ export default {
 </script>
 
 <style scoped>
+img{
+  width:100%;
+  height:100%
+}
 .el-header,
 .el-footer {
   background-color: #b3c0d1;
@@ -101,7 +107,7 @@ body > .el-container {
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
 }
-.name {
+.Name {
   position: absolute;
   right: 30px;
 }
@@ -113,5 +119,12 @@ body > .el-container {
   width: 51%;
   height: 50px!important;
   line-height: 50px!important;
+}
+.toux{
+  position: absolute;
+  right:80px;
+  width:50px;
+  height:50px;
+  line-height: 100px;
 }
 </style>

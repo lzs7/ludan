@@ -8,7 +8,7 @@
       <el-table-column prop="stock" label="库存"></el-table-column>
       <el-table-column prop="remarks" label="商品备注" width="180"></el-table-column>
       <el-table-column prop="classification" label="分类"></el-table-column>
-      <el-table-column prop="address" label="操作" fixed="right">
+      <el-table-column prop="address" label="操作">
         <template slot-scope="scope">
           <el-button size="mini" @click="dialogFormVisible = true">编辑</el-button>
         </template>
